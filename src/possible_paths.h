@@ -12,7 +12,7 @@ long possiblePathsRecursive(int M, int N) {
 
 long possiblePathsIterative(int M, int N) {
 	//make an array
-	int* array = new int[M * N];//MAX Size N*M
+	std::vector<int> array(M * N);//MAX Size N*M
 	
 	//fill first Row with 1
 	for (int i = 0; i < N; i++) {
@@ -31,5 +31,4 @@ long possiblePathsIterative(int M, int N) {
 		}//end inner for
 	}//end for
 	return array[(M - 1) * N + (N - 1)];
-	delete[] array;
 }
