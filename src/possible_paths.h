@@ -11,6 +11,15 @@ long possiblePathsRecursive(int M, int N) {
 }
 
 long possiblePathsIterative(int M, int N) {
+	//test the basics
+	if (M == 0 || N == 0) {
+		return 0;
+	}//end if
+
+	if (M + N == 2) {
+		return 1;
+	}//end if
+	
 	//make an array
 	std::vector<int> array(M * N);//MAX Size N*M
 	
