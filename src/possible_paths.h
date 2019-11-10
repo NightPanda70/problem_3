@@ -23,8 +23,8 @@ long possiblePathsIterative(int M, int N) {
 		array[i * N + 0] = 1;
 	}//end for
 
-	//add up all the possable paths that can happen a part of array
-	//then ones it done return the last value of that array
+	//add up all the possable paths that can happen.
+	//then once it's done return the last element of the array
 	for (int i = 1; i < M; i++) {
 		for (int j = 1; j < N; j++) {
 			array[i * N + j] = array[(i - 1) * N + j] + array[i * N + j - 1];
